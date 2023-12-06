@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(targe.position);
+        agent.SetDestination(Player.transform.position);
         if ((Player.transform.position - agent.transform.position).sqrMagnitude < 10)
         {
             healthSlider.value = healthSlider.value - 1;
